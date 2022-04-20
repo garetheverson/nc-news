@@ -1,3 +1,51 @@
 .App {
   text-align: center;
 }
+
+.header {
+  background-color: lightblue;
+}
+
+ul {
+  list-style: none;
+  display: inline;
+}
+
+li {
+  padding: 0.5em 2em 1.5em 2em;
+}
+
+li > .post-details {
+display: inline;
+margin-right: 2em;
+}
+
+li:first-child {
+  background-color: lightblue;
+}
+
+ul > li:first-child > .featured-post {
+  color: darkblue;
+}
+
+ul > li:first-child > .previous-post {
+  display: none;
+}
+
+ul > li:nth-child(2) > .previous-post {
+  color: darkblue;
+}
+
+ul > li:nth-child(n+2) > .featured-post  {
+  display: none;
+}
+
+ul > li:nth-child(n+3) > .previous-post  {
+  display: none;
+}
+
+img {
+  width: 80vw;
+  margin: 1em;
+}
+
