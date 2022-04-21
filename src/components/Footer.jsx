@@ -1,5 +1,9 @@
 const Footer = () => {
-  return <h3>© Gareth Everson, 2022</h3>;
+  return (
+    <footer>
+      <h4 className='footer-text'>© Gareth Everson, 2022</h4>
+    </footer>
+  );
 };
 
 export default Footer;

@@ -6,7 +6,6 @@ const Nav = () => {
 
   useEffect(() => {
     getTopics().then((topicsFromApi) => {
-      console.log(topicsFromApi.topics);
       setTopics(topicsFromApi.topics);
     });
   }, []);
@@ -19,9 +18,11 @@ const Nav = () => {
       <ul>
         {topics.map((topic) => {
           return (
-            <Link to={topic.slug} className='nav-topics'>
-              {topic.slug.charAt(0).toUpperCase() + topic.slug.slice(1)}
-            </Link>
+            <li key={topic.slug} className='nav-topics'>
+              <Link to={`/${topic.slug}`}>
+                {topic.slug.charAt(0).toUpperCase() + topic.slug.slice(1)}
+              </Link>
+            </li>
           );
         })}
       </ul>
