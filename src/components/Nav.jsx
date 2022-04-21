@@ -19,7 +19,7 @@ const Nav = () => {
         {topics.map((topic) => {
           return (
             <li key={topic.slug} className='nav-topics'>
-              <Link to={`/topics/${topic.slug}`}>
+              <Link to={`/${topic.slug}`}>
                 {topic.slug.charAt(0).toUpperCase() + topic.slug.slice(1)}
               </Link>
             </li>

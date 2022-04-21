@@ -78,6 +78,7 @@ nav > .home-button {
   display: flex;
   max-width: 20vw;
   margin-right: auto;
+  margin-left: 20px;
   padding: 10px 20px 10px 20px;
   color: white;
   text-decoration: none;
@@ -90,6 +91,7 @@ nav > ul {
   max-width: 80vw;
   justify-content: space-between;
   margin-left: auto;
+  margin-right: 20px;
   padding: 10px 10px 10px 20px;
 }
 

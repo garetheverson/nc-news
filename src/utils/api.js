@@ -15,3 +15,9 @@ export const getTopics = () => {
     return data;
   });
 };
+
+export const getArticlesByTopic = (topic) => {
+  return api.get(`/articles/?topic=${topic}`).then(({ data }) => {
+    return data;
+  });
+};

@@ -1,17 +1,22 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 import '../App.css';
 import { useParams } from 'react-router-dom';
+import { getArticlesByTopic } from '../utils/api';
 
 const SingleTopic = ({ articles }) => {
+  const [articlesByTopic, setArticlesByTopic] = useState([]);
   const params = useParams();
-  const filterTopics = articles.filter(
-    (article) => article.topic === params.slug
-  );
+  useEffect(() => {
+    getArticlesByTopic(params.slug).then((res) => {
+      setArticlesByTopic(res.articles);
+    });
+  }, [params]);
+
   return (
     <main>
       <h1 className='topic-heading'>{params.slug}</h1>
       <ul className='article-list'>
-        {filterTopics.map((article) => {
+        {articlesByTopic.map((article) => {
           const date = new Date(article.created_at);
           const publishedDate = `${date.getDate()}/${
             date.getMonth() + 1

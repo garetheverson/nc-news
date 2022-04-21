@@ -5,10 +5,11 @@ const Articles = () => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    getArticles().then((articlesFromApi) => {
-      setArticles(articlesFromApi.articles);
+    getArticles().then((res) => {
+      setArticles(res.articles);
     });
   }, []);
+
   return (
     <main>
       <ul className='article-list'>
