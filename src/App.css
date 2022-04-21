@@ -93,11 +93,24 @@ nav > ul {
   padding: 10px 10px 10px 20px;
 }
 
-.nav-topics {
+nav > ul > li > .nav-topics {
   margin-left: 0.5em;
   margin-right: 1em;
+
+}
+
+nav > ul > li > a:link, a:visited {
   color: white;
   text-decoration: none;
+}
+
+nav > ul > li {
+  min-width: 20%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  background-color:transparent;
+  margin: auto;
 }
 
 .article-list  {
@@ -109,6 +122,11 @@ nav > ul {
   padding-inline-end: 20px;
 }
 
+.topic-heading {
+  text-transform: capitalize;
+  margin: 2em;
+}
+
 li {
   min-width: 80%;
   max-width: 80%;
@@ -118,9 +136,11 @@ li {
   margin-left:auto;
   margin-right:auto;
   margin-bottom: 2rem;
-  padding:1rem;
+  padding:1.5rem;
   background-color: #fff;
 }
+
+
 
 li > .post-details {
 display: inline;
@@ -128,27 +148,27 @@ margin-right: 2em;
 font-size: 0.8rem;
 }
 
-li:first-child {
+main > ul > li:first-child {
   background-color:#ebebeb;
 }
 
-ul > li:first-child > .featured-post {
+main > ul > li:first-child > .featured-post {
   color: #005D9F;
 }
 
-ul > li:first-child > .previous-post {
+main > ul > li:first-child > .previous-post {
   display: none;
 }
 
-ul > li:nth-child(2) > .previous-post {
+main > ul > li:nth-child(2) > .previous-post {
   color: #005D9F;
 }
 
-ul > li:nth-child(n+2) > .featured-post  {
+main > ul > li:nth-child(n+2) > .featured-post  {
   display: none;
 }
 
-ul > li:nth-child(n+3) > .previous-post  {
+main > ul > li:nth-child(n+3) > .previous-post  {
   display: none;
 }
 
@@ -156,10 +176,20 @@ img {
   max-width: 90%;
   margin-left:auto;
   margin-right:auto;
+  padding-bottom: 1em;
 }
 
 .shadow-lg {
   box-shadow: 0 4px 30px hsl(0deg 0% 90% / 50%);
+}
+
+footer {
+  background-color: #005D9F;
+  padding: 2em;
+}
+
+.footer-text {
+  color: white
 }
 
 @media only screen and (min-width: 768px) {
