@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Header from './components/Header';
+// import Header from './components/Header';
 import Nav from './components/Nav';
 import Articles from './components/Articles';
 import Footer from './components/Footer';
@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div className='App'>
-      <Header />
+      {/* <Header /> */}
       <Nav />
       <Routes>
         <Route path='/' element={<Articles />}></Route>
