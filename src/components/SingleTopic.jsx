@@ -15,6 +15,7 @@ const SingleTopic = ({ articles }) => {
   return (
     <main>
       <h1 className='topic-heading'>{params.slug}</h1>
+      <p>Placeholder: would be great to use topic desc here</p>
       <ul className='article-list'>
         {articlesByTopic.map((article) => {
           const date = new Date(article.created_at);

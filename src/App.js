@@ -3,6 +3,7 @@ import './App.css';
 import Nav from './components/Nav';
 import Articles from './components/Articles';
 import SingleTopic from './components/SingleTopic';
+import Article from './components/Article';
 import Footer from './components/Footer';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Articles />}></Route>
         <Route path='/:slug' element={<SingleTopic />} />
+        <Route path='/articles/:article_id' element={<Article />} />
       </Routes>
       <Footer />
     </div>

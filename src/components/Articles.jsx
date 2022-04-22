@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getArticles } from '../utils/api';
+import { Link } from 'react-router-dom';
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
@@ -34,6 +35,9 @@ const Articles = () => {
                 src={`https://picsum.photos/id/${article.article_id}/400/200?blur=1`}
                 alt={article.title}
               ></img>
+              <Link to={`/articles/${article.article_id}`}>
+                <button>Read more</button>
+              </Link>
             </li>
           );
         })}
