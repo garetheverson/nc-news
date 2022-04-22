@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@700&family=Corben:wght@700&family=Nobile&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@700&family=Roboto+Slab:wght@700&family=Roboto&display=swap');
 
 .App {
   text-align: center;
@@ -18,7 +18,7 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
-  font-family: 'Nobile', sans-serif;
+  font-family: 'Roboto Slab', sans-serif;
   font-weight: 700;
   line-height: 1.7rem;
   color: #000000;
@@ -26,7 +26,7 @@ h2 {
 
 h3 {
   font-size: 1.4rem;
-  font-family: 'Nobile', sans-serif;
+  font-family: 'Roboto Slab', sans-serif;
   font-weight: 700;
   line-height: 1.6rem;
   color: #000000;
@@ -34,7 +34,7 @@ h3 {
 
 h4 {
   font-size: 1.3rem;
-  font-family: 'Nobile', sans-serif;
+  font-family: 'Roboto Slab', sans-serif;
   font-weight: 700;
   line-height: 1.5rem;
   color: #000000;
@@ -42,7 +42,7 @@ h4 {
 
 h5 {
   font-size: 1.2rem;
-  font-family: 'Nobile', sans-serif;
+  font-family: 'Roboto Slab', sans-serif;
   font-weight: 700;
   line-height: 1.3rem;
   color: #000000;
@@ -50,7 +50,7 @@ h5 {
 
 h6 {
   font-size: 1.1rem;
-  font-family: 'Nobile', sans-serif;
+  font-family: 'Roboto Slab', sans-serif;
   font-weight: 700;
   line-height: 1.2rem;
   color: #000000;
@@ -58,7 +58,7 @@ h6 {
 
 p {
   font-size: 18px;
-  font-family: 'Nobile', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #393939;
   line-height: 1.1rem;
   padding-bottom: 1rem;
@@ -84,12 +84,24 @@ article {
   padding:1.5rem;
 }
 
-article > p {
+article > .post-details {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+
+#root > div > main > article > h6 > a  {
+  color: #0000EE;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.article-body {
   text-align: justify;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 2rem;
-  line-height: 1.4rem;
+  line-height: 1.6rem;
 }
 
 article > img {
@@ -104,6 +116,49 @@ article > img {
   line-height: 1.4rem;
 }
 
+.votes {
+  background-color: #fafafa;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.votes > button  {
+  margin-left: 1rem;
+    margin-right: 1rem;
+    color: white;
+    border: white;
+    min-width: 150px;
+    min-height: 35px;
+    font-size: 0.9rem;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 8px;
+}
+
+button.upvote-button  {
+    background-color: #005D9F;
+}
+
+button.downvote-button {
+    background-color: #9f3800;
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.votes > h6 {
+  margin: 0.5rem 1rem;
+}
 
 nav > .home-button {
   display: flex;
@@ -112,6 +167,8 @@ nav > .home-button {
   margin-left: 20px;
   padding: 10px 20px 10px 20px;
   color: white;
+  font-family: 'Roboto Slab';
+  font-size: 2.5rem;
   text-decoration: none;
 }
 
@@ -154,6 +211,19 @@ nav > ul > li {
   padding-inline-start: 20px;
   padding-inline-end: 20px;
   text-transform: capitalize;
+}
+
+button {
+  margin-left: 1rem;
+    margin-right: 1rem;
+    background-color: #005D9F;
+    color: white;
+    border: white;
+    min-width: 100px;
+    min-height: 30px;
+    font-size: 1rem;
+    border-style: outset;
+    border-width: 2px;
 }
 
 .topic-heading {

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import '../App.css';
-import { useParams } from 'react-router-dom';
+import Votes from './Votes';
+import { useParams, Link } from 'react-router-dom';
 import { getArticleById } from '../utils/api';
 import { publishedDate } from '../utils/helpers';
 
@@ -35,16 +36,19 @@ const Article = () => {
       <article className='shadow-lg'>
         <h2>{article.title}</h2>
         <h6 className='post-details'>
-          Topic: {article.topic}
+          Topic:{' '}
+          <Link className='breadcrumb' to={`/${article.topic}`}>
+            {article.topic}
+          </Link>
           {' / '}Author: {article.author}
-          {' / '}Votes: {article.votes}
           {' / '}Published: {createdDate}
         </h6>
+        <Votes votes={article.votes}></Votes>
         <img
-          src={`https://picsum.photos/id/${article.article_id}/800/300?blur=1`}
+          src={`https://picsum.photos/id/${article_id}/800/300?blur=1`}
           alt={article.title}
         ></img>
-        <p>{article.body}</p>
+        <p className='article-body'>{article.body}</p>
       </article>
     </main>
   );
