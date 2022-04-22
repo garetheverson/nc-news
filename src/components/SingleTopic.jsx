@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import '../App.css';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { getArticlesByTopic } from '../utils/api';
 
 const SingleTopic = ({ articles }) => {
@@ -38,6 +38,9 @@ const SingleTopic = ({ articles }) => {
                 src={`https://picsum.photos/id/${article.article_id}/400/200?blur=1`}
                 alt={article.title}
               ></img>
+              <Link to={`/articles/${article.article_id}`}>
+                <button>Read more</button>
+              </Link>
             </li>
           );
         })}

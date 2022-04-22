@@ -27,3 +27,18 @@ export const getArticleById = (article_id) => {
     return data;
   });
 };
+
+export const updateArticleVotesById = (num, article_id) => {
+  return api
+    .patch(`/articles/${article_id}`, { inc_votes: num })
+    .then((result) => {
+      return result;
+    })
+    .catch(function (error) {
+      if (error.response) {
+        console.log(error.response.data);
+        console.log(error.response.status);
+        console.log(error.response.headers);
+      }
+    });
+};
