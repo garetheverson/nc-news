@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import '../App.css';
 import { useParams } from 'react-router-dom';
 import { getArticleById } from '../utils/api';
+import { publishedDate } from '../utils/helpers';
 
 const Article = () => {
   const [article, setArticleById] = useState([]);
@@ -27,10 +28,7 @@ const Article = () => {
     );
   }
 
-  const date = new Date(article.created_at);
-  const publishedDate = `${date.getDate()}/${
-    date.getMonth() + 1
-  }/${date.getFullYear()}`;
+  const createdDate = publishedDate(article.created_at);
 
   return (
     <main>
@@ -40,7 +38,7 @@ const Article = () => {
           Topic: {article.topic}
           {' / '}Author: {article.author}
           {' / '}Votes: {article.votes}
-          {' / '}Published: {publishedDate}
+          {' / '}Published: {createdDate}
         </h6>
         <img
           src={`https://picsum.photos/id/${article.article_id}/800/300?blur=1`}
